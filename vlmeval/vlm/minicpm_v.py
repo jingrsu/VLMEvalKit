@@ -9,6 +9,7 @@ from .base import BaseModel
 from ..smp import *
 from ..dataset import DATASET_TYPE
 
+from peft import PeftModel
 
 class MiniCPM_V(BaseModel):
 
@@ -269,6 +270,9 @@ class MiniCPM_V_2_6(BaseModel):
         self.model_path = model_path
         print(f'load from path {self.model_path}')
         self.model = AutoModel.from_pretrained(self.model_path, trust_remote_code=True)
+        if 'path_to_adapter' in kwargs:
+            self.model = PeftModel.from_pretrained(self.model, kwargs['path_to_adapter'], trust_remote_code=True)
+            self.model = self.model.merge_and_unload()
         self.model = self.model.to(dtype=torch.bfloat16)
         self.model.eval().cuda()
 

@@ -98,6 +98,8 @@ minicpm_series = {
     'MiniCPM-V-2': partial(MiniCPM_V, model_path='openbmb/MiniCPM-V-2'),
     'MiniCPM-Llama3-V-2_5': partial(MiniCPM_Llama3_V, model_path='openbmb/MiniCPM-Llama3-V-2_5'),
     'MiniCPM-V-2_6': partial(MiniCPM_V_2_6, model_path='openbmb/MiniCPM-V-2_6'),
+    'MiniCPM-V-2_6-sft': partial(MiniCPM_V_2_6, model_path='/mnt/nvme0n1p1/hongxin_li/MiniCPM-V/output/output_minicpmv26_proj_2/checkpoint-10010/'),
+    'MiniCPM-V-2_6-lora': partial(MiniCPM_V_2_6, model_path='openbmb/MiniCPM-V-2_6', path_to_adapter='/mnt/nvme0n1p1/hongxin_li/MiniCPM-V/output/MiniCPM-V-2_6-imagenet_sub_new_prompt_0904-lora-lr_1e-5'),
 }
 
 xtuner_series = {
@@ -119,7 +121,11 @@ qwen_series = {
 
 llava_series = {
     'llava_v1.5_7b': partial(LLaVA, model_path='liuhaotian/llava-v1.5-7b'),
+    'llava-v1.5-7b-mix665k+imagenet_100k': partial(LLaVA, model_path='/mnt/nvme0n1p1/hongxin_li/tmp/LLaVA/checkpoints/llava-v1.5-7b-mix665k+imagenet_100k'),
+    'llava-v1.5-7b-mix665k+imagenet_100k-lora': partial(LLaVA, model_path='/mnt/nvme0n1p1/hongxin_li/tmp/LLaVA/checkpoints/llava-v1.5-7b-mix665k+imagenet_100k-lora-merged'),
+    'llava_v1.5_7b_sft': partial(LLaVA, model_path='liuhaotian/llava-v1.5-7b', mm_projector_path='/mnt/nvme0n1p1/hongxin_li/VLMClassifier/imagenet_and_llava_mm_projector.bin'),
     'llava_v1.5_13b': partial(LLaVA, model_path='liuhaotian/llava-v1.5-13b'),
+    'llava_v1.5_7b_hf': partial(LLaVA_HF, model_path='llava-hf/llava-1.5-7b-hf'),
     'llava_v1_7b': partial(LLaVA, model_path=LLAVA_V1_7B_MODEL_PTH),
     'sharegpt4v_7b': partial(LLaVA, model_path='Lin-Chen/ShareGPT4V-7B'),
     'sharegpt4v_13b': partial(LLaVA, model_path='Lin-Chen/ShareGPT4V-13B'),

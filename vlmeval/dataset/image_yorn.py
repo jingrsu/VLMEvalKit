@@ -12,6 +12,12 @@ class ImageYORNDataset(ImageBaseDataset):
         'MME': 'https://opencompass.openxlab.space/utils/VLMEval/MME.tsv',
         'HallusionBench': 'https://opencompass.openxlab.space/utils/VLMEval/HallusionBench.tsv',
         'POPE': 'https://opencompass.openxlab.space/utils/VLMEval/POPE.tsv',
+        
+        'SpatialSense': 'https://opencompass.openxlab.space/utils/VLMEval/spatialsense_yn.tsv',
+        'GRiD_3D_YN': 'https://opencompass.openxlab.space/utils/VLMEval/grid_3d_yn.tsv',
+        'CLEVR': 'https://opencompass.openxlab.space/utils/VLMEval/clevr_yn.tsv',
+        'SpatialBench_YN': 'https://opencompass.openxlab.space/utils/VLMEval/spatialbench_yn.tsv',
+        'VQASynth': 'https://opencompass.openxlab.space/utils/VLMEval/vqasynth_yn.tsv',
     }
 
     DATASET_MD5 = {

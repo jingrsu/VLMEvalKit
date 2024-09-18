@@ -87,7 +87,10 @@ class ImageMCQDataset(ImageBaseDataset):
         'TaskMeAnything_v1_imageqa_random': (
             'https://huggingface.co/datasets/weikaih/TaskMeAnything-v1-imageqa-random/'
             'resolve/main/TaskMeAnything-v1-imageqa-random.tsv'
-        )
+        ),
+        
+        'GRiD_3D_MCQ': 'https://opencompass.openxlab.space/utils/VLMEval/grid_3d_mc.tsv',
+        'SpatialBench_MCQ': 'https://opencompass.openxlab.space/utils/VLMEval/spatialbench_mc.tsv',
     }
 
     DATASET_MD5 = {

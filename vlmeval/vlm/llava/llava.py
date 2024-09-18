@@ -47,6 +47,9 @@ class LLaVA(BaseModel):
                 device='cpu',
                 device_map='cpu'
             )
+            if 'mm_projector_path' in kwargs:
+                mm_projector_weights = torch.load(kwargs.pop('mm_projector_path'))
+                self.model.load_state_dict(mm_projector_weights, strict=False)
         except:
             if 'ShareGPT4V' in model_path:
                 import llava

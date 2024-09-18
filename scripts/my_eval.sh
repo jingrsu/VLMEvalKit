@@ -1,0 +1,1 @@
+torchrun --nproc-per-node=8 run.py --data GRiD_3D_MCQ SpatialBench_MCQ SpatialSense GRiD_3D_YN CLEVR SpatialBench_YN VQASynth --model llava_v1.5_7b --verbose
