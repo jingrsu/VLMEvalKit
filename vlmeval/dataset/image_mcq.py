@@ -89,8 +89,8 @@ class ImageMCQDataset(ImageBaseDataset):
             'resolve/main/TaskMeAnything-v1-imageqa-random.tsv'
         ),
         
-        'GRiD_3D_MCQ': 'https://opencompass.openxlab.space/utils/VLMEval/grid_3d_mc.tsv',
-        'SpatialBench_MCQ': 'https://opencompass.openxlab.space/utils/VLMEval/spatialbench_mc.tsv',
+        'GRiD_3D_MCQ': 'https://huggingface.co/datasets/sujr/VLMEval/resolve/main/grid_3d_mc.tsv',
+        'SpatialBench_MCQ': 'https://huggingface.co/datasets/sujr/VLMEval/resolve/main/spatialbench_mc.tsv',
     }
 
     DATASET_MD5 = {
